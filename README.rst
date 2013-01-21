@@ -1,6 +1,10 @@
 A practical Roman numerals implementation
 ======================================================================
 
+.. code::
+
+    pip install rome==0.0.1
+
 **rome** is the first industrial-strength Roman numerals
 implementation for Python. It features Roman-to-Arabic and
 Arabic-to-Roman numerals convertion, as well as normalization of
