@@ -9,6 +9,8 @@ A practical Roman numerals implementation
 implementation for Python. It features Roman-to-Arabic and
 Arabic-to-Roman numerals convertion, as well as normalization of
 denormalized Roman numerals using unified object-oriented interface.
+It is developed using test-driven development, and features an
+extensive test-suite.
 
 .. code:: python
 
