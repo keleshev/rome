@@ -3,7 +3,7 @@ A practical Roman numerals implementation
 
    New in version 0.0.2:
 
-   * Fix bug that did not allow numbers greater than MCMXCIX
+   * Fixed bug that did not allow numbers greater than MCMXCIX
 
 .. code::
 
