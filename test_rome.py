@@ -13,6 +13,7 @@ def test_one_letter_numerals():
 def test_numerals_that_only_sum_up():
     assert Roman('XX') == 20
     assert Roman('MDCCCCX') == 1910
+    assert Roman('MMXIII') == 2013
 
 
 def test_numerals_that_need_to_substract():
@@ -27,6 +28,7 @@ def test_arabic_to_roman():
     assert str(Roman(20)) == 'XX'
     assert repr(Roman(20)) == "Roman('XX')"
     assert Roman(1999) == Roman('MDCCCCLXXXXVIIII')
+    assert Roman(2112) == Roman('MMCXII')
 
 
 def test_expressions():
@@ -49,6 +51,8 @@ def test_construct_number_negatively():
     assert Roman(6)._negatively() == 'IIIIX'
     assert Roman(44)._negatively() == 'VIL'
     assert Roman(20)._negatively() == 'XXXL'
+    assert Roman(2000)._negatively() == ''
+    assert Roman(10000)._negatively() == ''
 
 
 def test_split_number_into_groups():
@@ -61,3 +65,5 @@ def test_normalize_roman_number():
     assert str(Roman('MDCCCCLXXXXVIIII')) == 'MCMXCIX'
     assert str(Roman(1903)) == 'MCMIII'
     assert str(Roman('IIII')) == 'IV'
+    assert str(Roman(2000)) == 'MM'
+    assert str(Roman(2013)) == 'MMXIII'

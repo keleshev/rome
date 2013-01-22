@@ -26,6 +26,8 @@ class Roman(int):
             return super(Roman, class_).__new__(class_, roman)
 
     def _negatively(self):
+        if self > 1000:
+            return ''
         base, s = sorted((v, k) for k, v in _map.items() if v >= self)[0]
         decrement = base - self
         if decrement == 0:
@@ -59,7 +61,7 @@ class Roman(int):
                 continue
             pos = Roman(n)._positively()
             neg = Roman(n)._negatively()
-            s += neg if len(neg) < len(pos) else pos
+            s += neg if neg and len(neg) < len(pos) else pos
         return s
 
     def __repr__(self):
