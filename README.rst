@@ -1,13 +1,9 @@
 A practical Roman numerals implementation
 ======================================================================
 
-   New in version 0.0.2:
-
-   * Fixed bug that did not allow numbers greater than MCMXCIX
-
 .. code::
 
-    pip install rome==0.0.2
+    pip install rome==0.0.3
 
 **rome** is the first industrial-strength Roman numerals
 implementation for Python. It features Roman-to-Arabic and
