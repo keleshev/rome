@@ -17,6 +17,7 @@ def test_numerals_that_only_sum_up():
 
 
 def test_numerals_that_need_to_substract():
+    assert Roman('IIX') == 8
     assert Roman('XIX') == 19
     assert Roman('MCMLIV') == 1954
     assert Roman('M cM xC') == 1990
