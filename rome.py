@@ -16,7 +16,7 @@ class Roman(int):
             roman = str(roman).upper().replace(' ', '')
             if not set(_map) >= set(roman):
                 raise ValueError('Not a valid Roman numeral: %r' % roman)
-            values = map(_map.get, roman)
+            values = list(map(_map.get, roman))
             value = sum(-n if n < max(values[i:]) else n
                         for i, n in enumerate(values))
             return super(Roman, class_).__new__(class_, value)
@@ -51,7 +51,7 @@ class Roman(int):
         for i in (10 ** i for i in count()):
             if i > self:
                 break
-            result.append(self % (i * 10) / i * i)
+            result.append(self % (i * 10) // i * i)
         return result[::-1]
 
     def __str__(self):
