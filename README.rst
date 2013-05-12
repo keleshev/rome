@@ -1,16 +1,23 @@
-A practical Roman numerals implementation
+Rome
 ======================================================================
 
-.. code::
-
-    pip install rome==0.0.3
-
-**rome** is the first industrial-strength Roman numerals
+Overview
+--------
+**Rome** is the first industrial-strength Roman numerals
 implementation for Python. It features Roman-to-Arabic and
 Arabic-to-Roman numerals convertion, as well as normalization of
 denormalized Roman numerals using unified object-oriented interface.
 It is developed using test-driven development, and features an
 extensive test-suite.
+
+Installation
+------------
+.. code::
+
+    pip install rome==0.0.3
+
+Usage
+-----
 
 .. code:: python
 
