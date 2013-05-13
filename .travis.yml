@@ -4,5 +4,5 @@
 # configured in tox.ini file.
 
 language: python
-install: pip install tox --use-mirrors --insecure
+install: pip install tox --use-mirrors
 script: tox
