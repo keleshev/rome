@@ -1,4 +1,11 @@
+# Travis (http://travis-ci.org/) is a continuous integration
+# service for open source projects. This file configures
+# Travis to install and run `tox` test runner, which is
+# configured in tox.ini file.
+
 language: python
-env: PIP_INSECURE=true
 install: pip install tox --use-mirrors
 script: tox
+
+# Disable SSL (Python 2.5 does not have `ssl` module).
+env: PIP_INSECURE=true
