@@ -4,8 +4,5 @@
 # configured in tox.ini file.
 
 language: python
-install: pip install tox --use-mirrors
+install: pip install tox --use-mirrors --insecure
 script: tox
-
-# Disable SSL (Python 2.5 does not have `ssl` module).
-env: PIP_INSECURE=true
