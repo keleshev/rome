@@ -1,3 +1,4 @@
 language: python
+env: PIP_INSECURE=true
 install: pip install tox --use-mirrors
 script: tox
