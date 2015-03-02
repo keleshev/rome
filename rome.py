@@ -1,7 +1,7 @@
 from itertools import count
 
 
-__version__ = '0.0.3'
+__version__ = '0.0.4'
 
 
 _map = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
