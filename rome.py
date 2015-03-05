@@ -1,7 +1,7 @@
 from itertools import count
 
 
-__version__ = '0.0.3'
+__version__ = '0.0.4'
 
 
 _map = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
@@ -60,8 +60,12 @@ class Roman(int):
             if n == 0:
                 continue
             pos = Roman(n)._positively()
-            neg = Roman(n)._negatively()
-            s += neg if neg and len(neg) < len(pos) else pos
+            # If the last 4 chars are the same, use the negative method.
+            if ((len(pos) == 4 and len(set(pos)) == 1) or 
+                (len(pos) > 4 and len(set(pos[1:5])) == 1)):
+                s += Roman(n)._negatively()
+            else:
+                s += pos
         return s
 
     def __repr__(self):
